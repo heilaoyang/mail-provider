@@ -23,7 +23,26 @@ cd falcon-mail-provider
 ./control start
 ```
 即可启动
+cfg.json文件相关信息示例。牢记password不是你登陆的那个密码。是你smtp的授权码。阿里云的addr禁用了25端口所以用465端口
+```bash
+{
+    "debug": true,
+    "http": {
+        "listen": "0.0.0.0:4000",
+        "token": ""
+    },
+    "smtp": {
+        "addr": "smtp.163.com:465",
+        "username": "a852296310@163.com",
+        "password": "a88888888",
+        "from": "a852296310@163.com",
+        "tls":true,
+        "anonymous":false,
+        "skipVerify":true
+    }
+}
 
+```
 2.源码编译（如无科学上网方法，请勿尝试）
 下载之后为源码，安装golang环境，环境配置参考[golang环境配置](http://book.open-falcon.org/zh/quick_install/prepare.html)
 编译方法
