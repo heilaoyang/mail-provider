@@ -23,6 +23,7 @@ cd falcon-mail-provider
 ./control start
 ```
 即可启动
+
 cfg.json文件相关信息示例。牢记password不是你登陆的那个密码。是你smtp的授权码。阿里云的addr禁用了25端口所以用465端口
 ```bash
 {
